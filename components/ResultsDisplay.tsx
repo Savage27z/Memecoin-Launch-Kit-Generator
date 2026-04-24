@@ -142,7 +142,7 @@ export default function ResultsDisplay({ results, tokenName }: Props) {
         <div className="space-y-2 text-sm text-text-secondary">
           <div className="flex justify-between"><span>Pitch generation</span><span className="text-neon-green">Free (local)</span></div>
           <div className="flex justify-between"><span>Lyrics (Suno)</span><span>~$0.01</span></div>
-          <div className="flex justify-between"><span>Banner (Flux)</span><span>~$0.03</span></div>
+          <div className="flex justify-between"><span>Banner (Midjourney)</span><span>~$0.05</span></div>
           <div className="flex justify-between"><span>Theme Song (Suno)</span><span>~$0.10</span></div>
           <div className="flex justify-between"><span>Promo Video (Luma)</span><span>~$0.30</span></div>
           <div className="border-t border-card-border my-2" />
