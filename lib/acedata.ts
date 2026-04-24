@@ -44,7 +44,7 @@ export async function generateBanner(prompt: string): Promise<BannerResult> {
       action: 'generate',
       prompt,
       size: '1024x1024',
-      model: 'flux-dev',
+      model: 'flux-pro-1.1',
     }),
   });
 
