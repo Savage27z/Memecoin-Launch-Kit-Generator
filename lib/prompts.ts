@@ -71,7 +71,7 @@ export function buildLyricsPrompt(tokenName: string, vibe: string): string {
 }
 
 export function buildBannerPrompt(tokenName: string, vibe: string): string {
-  return `Cryptocurrency memecoin promotional banner for "$${tokenName.toUpperCase()}". ${vibe}. Digital art style, vibrant neon colors, crypto symbols, rocket ships, moon, diamond motifs. Professional crypto marketing banner. Bold text "$${tokenName.toUpperCase()}" prominently displayed. Dark background with glowing neon accents. High quality, 4k, detailed.`;
+  return `Cryptocurrency memecoin promotional banner for "$${tokenName.toUpperCase()}", ${vibe}, digital art style, vibrant neon colors, crypto symbols, rocket ships, moon, diamond motifs, professional crypto marketing banner, bold text "$${tokenName.toUpperCase()}" prominently displayed, dark background with glowing neon accents, high quality, 4k, detailed --v 6 --ar 1:1`;
 }
 
 export function buildMusicStyle(): string {

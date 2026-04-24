@@ -37,15 +37,10 @@ export async function generateLyrics(prompt: string): Promise<LyricsResult> {
 }
 
 export async function generateBanner(prompt: string): Promise<BannerResult> {
-  const res = await fetch(`${API_BASE}/flux/images`, {
+  const res = await fetch(`${API_BASE}/midjourney/imagine`, {
     method: 'POST',
     headers: getHeaders(),
-    body: JSON.stringify({
-      action: 'generate',
-      prompt,
-      size: '1024x1024',
-      model: 'flux-pro-1.1',
-    }),
+    body: JSON.stringify({ prompt }),
   });
 
   if (!res.ok) {
@@ -55,14 +50,7 @@ export async function generateBanner(prompt: string): Promise<BannerResult> {
 
   const json = await res.json();
 
-  let imageUrl = '';
-  if (json.data && Array.isArray(json.data) && json.data.length > 0) {
-    imageUrl = json.data[0].image_url || json.data[0].url || '';
-  } else if (json.image_url) {
-    imageUrl = json.image_url;
-  } else if (json.url) {
-    imageUrl = json.url;
-  }
+  const imageUrl = json.raw_image_url || json.image_url || '';
 
   if (!imageUrl) {
     throw new Error('No image URL in banner response');
