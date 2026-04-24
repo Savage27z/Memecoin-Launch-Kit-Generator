@@ -1,0 +1,1 @@
+# Memecoin-Launch-Kit-Generator
