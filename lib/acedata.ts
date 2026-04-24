@@ -25,13 +25,14 @@ export async function generateLyrics(prompt: string): Promise<LyricsResult> {
   }
 
   const json = await res.json();
-  if (!json.text && !json.title) {
+  const lyrics = json.data || json;
+  if (!lyrics.text && !lyrics.title) {
     throw new Error('Unexpected lyrics response format');
   }
 
   return {
-    text: json.text || '',
-    title: json.title || 'Untitled',
+    text: lyrics.text || '',
+    title: lyrics.title || 'Untitled',
   };
 }
 
