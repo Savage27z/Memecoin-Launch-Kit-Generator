@@ -55,7 +55,7 @@ Generate a complete memecoin launch kit — pitch, banner art, theme song, and p
 
 ```bash
 # Clone the repo
-git clone https://github.com/Pyrex-13/Memecoin-Launch-Kit-Generator.git
+git clone https://github.com/savage27z/Memecoin-Launch-Kit-Generator.git
 cd Memecoin-Launch-Kit-Generator
 
 # Install dependencies
